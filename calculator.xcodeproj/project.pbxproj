@@ -25,6 +25,10 @@
 		2DA90C2217D5F699006950D9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DA90C2017D5F699006950D9 /* InfoPlist.strings */; };
 		2DA90C2517D5F699006950D9 /* calculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DA90C2417D5F699006950D9 /* calculatorTests.m */; };
 		2DA90C2F17D5F7D0006950D9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA90C2E17D5F7D0006950D9 /* QuartzCore.framework */; };
+		4AA67E1517E9EE0600095870 /* Splash-iPhone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4AA67E1417E9EE0600095870 /* Splash-iPhone.jpg */; };
+		4AA67E1817E9F4A400095870 /* footer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA67E1617E9F4A400095870 /* footer.png */; };
+		4AA67E1917E9F4A400095870 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA67E1717E9F4A400095870 /* header.png */; };
+		4AA67E1D17EA019D00095870 /* main screen basic textfield i5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4AA67E1C17EA019D00095870 /* main screen basic textfield i5.png */; };
 		4ACE7E2B17E0F0380099539A /* SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ACE7E2A17E0F0380099539A /* SplashScreen.m */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +67,10 @@
 		2DA90C2317D5F699006950D9 /* calculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculatorTests.h; sourceTree = "<group>"; };
 		2DA90C2417D5F699006950D9 /* calculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculatorTests.m; sourceTree = "<group>"; };
 		2DA90C2E17D5F7D0006950D9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4AA67E1417E9EE0600095870 /* Splash-iPhone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Splash-iPhone.jpg"; sourceTree = "<group>"; };
+		4AA67E1617E9F4A400095870 /* footer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = footer.png; sourceTree = "<group>"; };
+		4AA67E1717E9F4A400095870 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		4AA67E1C17EA019D00095870 /* main screen basic textfield i5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "main screen basic textfield i5.png"; sourceTree = "<group>"; };
 		4ACE7E2917E0F0380099539A /* SplashScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreen.h; sourceTree = "<group>"; };
 		4ACE7E2A17E0F0380099539A /* SplashScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreen.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,6 +191,7 @@
 		4AEEA88A17E9E149007089C3 /* Images  */ = {
 			isa = PBXGroup;
 			children = (
+				4AA67E1417E9EE0600095870 /* Splash-iPhone.jpg */,
 			);
 			name = "Images ";
 			sourceTree = "<group>";
@@ -200,6 +209,9 @@
 		4AEEA88C17E9E17D007089C3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4AA67E1717E9F4A400095870 /* header.png */,
+				4AA67E1C17EA019D00095870 /* main screen basic textfield i5.png */,
+				4AA67E1617E9F4A400095870 /* footer.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -282,6 +294,10 @@
 				2DA90C0A17D5F699006950D9 /* Default-568h@2x.png in Resources */,
 				2DA90C0D17D5F699006950D9 /* MainStoryboard.storyboard in Resources */,
 				2D7B424A17E8D6AF003E76DF /* MainScreen-iPhone.jpg in Resources */,
+				4AA67E1517E9EE0600095870 /* Splash-iPhone.jpg in Resources */,
+				4AA67E1817E9F4A400095870 /* footer.png in Resources */,
+				4AA67E1917E9F4A400095870 /* header.png in Resources */,
+				4AA67E1D17EA019D00095870 /* main screen basic textfield i5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

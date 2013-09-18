@@ -11,7 +11,12 @@
 @interface calViewController : UIViewController<UITextFieldDelegate>
 {
     UIImageView *mainView;
-
+    UIImageView *headerView;
+    UITextField *textField;
+    UIImageView *buttonBackGround;
+    UIImageView *footerView;
+    UIView * iAdd;
+    
 }
 
 @end

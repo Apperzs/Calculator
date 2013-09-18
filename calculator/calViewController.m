@@ -22,16 +22,46 @@
 
 - (void)viewDidLoad
 {
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
     
-    mainView=[[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 320, 568)];
-    mainView.backgroundColor=[UIColor colorWithRed:118/255.0f green:177/255.0f blue:70/255.0f alpha:1.0];
+    mainView=[[UIImageView alloc]init];
+    headerView =[[UIImageView alloc]init];
+    textField = [[UITextField alloc] init];
+    buttonBackGround = [[UIImageView alloc]init];
+    footerView =[[UIImageView alloc]init];
+    iAdd = [[UIView alloc]init];
+    
+    
+    if (screenSize.height == 568) {
+        mainView.frame = CGRectMake(0, 0, 320, 568);
+        headerView.frame = CGRectMake(0, 0, 320, 98/2);
+        textField.frame = CGRectMake(0, 98/2, 320 ,195/2);
+        buttonBackGround.frame = CGRectMake(0, 195/2, 320, 847/2);
+        footerView.frame = CGRectMake(0, 847/2, 320, 98/2);
+        iAdd.frame = CGRectMake(0, 98/2, 320, 101/2);
+    
+    } else if (screenSize.height == 480) {
+        
+        mainView.frame = CGRectMake(0, 0, 320, 480);
+        headerView.frame = CGRectMake(0, 0, 320, 98/2);
+        textField.frame = CGRectMake(0, 98/2, 320 ,195/2);
+        buttonBackGround.frame = CGRectMake(0, 195/2, 320, 847/2);
+        footerView.frame = CGRectMake(0, 847/2, 320, 98/2);
+        iAdd.frame = CGRectMake(0, 98/2, 320, 101/2);
+    }
+
+    mainView.backgroundColor=[UIColor colorWithRed:0.02 green:0.604 blue:0.141 alpha:1.0];
     mainView.userInteractionEnabled=YES;
     [self.view addSubview:mainView];
-    [self button];
     
-    UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(10, 80, 300,60)];
+    headerView.image = [UIImage imageNamed:@"header.png"];
+    //headerView.backgroundColor=[UIColor colorWithRed:118/255.0f green:177/255.0f blue:70/255.0f alpha:1.0];
+    headerView.userInteractionEnabled = YES;
+    [mainView addSubview:headerView];
+    
     textField.borderStyle = UITextBorderStyleNone;
-    textField.font = [UIFont systemFontOfSize:15];
+    [textField setBackground:[UIImage imageNamed:@"main screen basic textfield i5.png"]];
+    textField.font = [UIFont fontWithName:@"" size:24];
     textField.placeholder = @"enter text";
     textField.autocorrectionType = UITextAutocorrectionTypeNo;
     textField.keyboardType = UIKeyboardTypeDefault;
@@ -40,6 +70,17 @@
     textField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     textField.delegate = self;
     [mainView addSubview:textField];
+    
+    buttonBackGround.image = [UIImage imageNamed:@""];
+    buttonBackGround.userInteractionEnabled = YES;
+    [mainView addSubview:buttonBackGround];
+    
+    footerView.image = [UIImage imageNamed:@"footer.png"];
+    //footerView.backgroundColor=[UIColor blueColor];
+    footerView.userInteractionEnabled = YES;
+//    [mainView addSubview:footerView];
+    
+    [self button];
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
