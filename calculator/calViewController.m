@@ -27,40 +27,64 @@
     mainView=[[UIImageView alloc]init];
     headerView =[[UIImageView alloc]init];
     textField = [[UITextField alloc] init];
-    buttonBackGround = [[UIImageView alloc]init];
+    middelBackGround = [[UIImageView alloc]init];
     footerView =[[UIImageView alloc]init];
     iAdd = [[UIView alloc]init];
+    mainButton = [[UIButton alloc]init];
+    settingButton = [[UIButton alloc]init];
     
     
     if (screenSize.height == 568) {
         mainView.frame = CGRectMake(0, 0, 320, 568);
-        headerView.frame = CGRectMake(0, 0, 320, 98/2);
-        textField.frame = CGRectMake(0, 98/2, 320 ,195/2);
-        buttonBackGround.frame = CGRectMake(0, 195/2, 320, 847/2);
-        footerView.frame = CGRectMake(0, 847/2, 320, 98/2);
-        iAdd.frame = CGRectMake(0, 98/2, 320, 101/2);
+        
+        mainButton.frame = CGRectMake(0, 0, 44,44);
+        mainButton.frame = CGRectMake(0, 0, 44,44);
+        
+        headerView.frame = CGRectMake(0, 0, 320, 49);
+        textField.frame = CGRectMake(0, 49, 320 ,97.5);
+        middelBackGround.frame = CGRectMake(0, 145, 320, 322);
+        footerView.frame = CGRectMake(0, 468, 320, 49);
+        iAdd.frame = CGRectMake(0, 517, 320, 49);
     
     } else if (screenSize.height == 480) {
         
         mainView.frame = CGRectMake(0, 0, 320, 480);
+        
+        mainButton.frame = CGRectMake(0, 0, 44,44);
+        settingButton.frame = CGRectMake(10, 0, 44,44);
+        
         headerView.frame = CGRectMake(0, 0, 320, 98/2);
         textField.frame = CGRectMake(0, 98/2, 320 ,195/2);
-        buttonBackGround.frame = CGRectMake(0, 195/2, 320, 847/2);
+        middelBackGround.frame = CGRectMake(0, 195/2, 320, 847/2);
         footerView.frame = CGRectMake(0, 847/2, 320, 98/2);
         iAdd.frame = CGRectMake(0, 98/2, 320, 101/2);
     }
 
-    mainView.backgroundColor=[UIColor colorWithRed:0.02 green:0.604 blue:0.141 alpha:1.0];
+    mainView.backgroundColor=[UIColor colorWithRed:0.369 green:0.655 blue:0.29 alpha:1.0];
     mainView.userInteractionEnabled=YES;
     [self.view addSubview:mainView];
     
     headerView.image = [UIImage imageNamed:@"header.png"];
-    //headerView.backgroundColor=[UIColor colorWithRed:118/255.0f green:177/255.0f blue:70/255.0f alpha:1.0];
     headerView.userInteractionEnabled = YES;
     [mainView addSubview:headerView];
     
+    mainButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [mainButton setBackgroundImage:[UIImage imageNamed:@"menu-button.png"] forState:UIControlStateNormal];
+    [mainButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+    [mainButton addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    mainButton.userInteractionEnabled = YES;
+    [headerView addSubview:mainButton];
+    
+    settingButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [settingButton setBackgroundImage:[UIImage imageNamed:@"settings-button.png"] forState:UIControlStateNormal];
+    [settingButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateHighlighted];
+    [settingButton addTarget:self action:@selector(ButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    settingButton.userInteractionEnabled = YES;
+    [headerView addSubview:settingButton];
+    
+    
     textField.borderStyle = UITextBorderStyleNone;
-    [textField setBackground:[UIImage imageNamed:@"main screen basic textfield i5.png"]];
+    [textField setBackground:[UIImage imageNamed:@"calculation_bar.png"]];
     textField.font = [UIFont fontWithName:@"" size:24];
     textField.placeholder = @"enter text";
     textField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -71,14 +95,14 @@
     textField.delegate = self;
     [mainView addSubview:textField];
     
-    buttonBackGround.image = [UIImage imageNamed:@""];
-    buttonBackGround.userInteractionEnabled = YES;
-    [mainView addSubview:buttonBackGround];
+    middelBackGround.image = [UIImage imageNamed:@"middelBackGround.png"];
+    middelBackGround.userInteractionEnabled = YES;
+    [mainView addSubview:middelBackGround];
     
     footerView.image = [UIImage imageNamed:@"footer.png"];
-    //footerView.backgroundColor=[UIColor blueColor];
     footerView.userInteractionEnabled = YES;
-//    [mainView addSubview:footerView];
+    [mainView addSubview:footerView];
+    
     
     [self button];
     

@@ -13,9 +13,11 @@
     UIImageView *mainView;
     UIImageView *headerView;
     UITextField *textField;
-    UIImageView *buttonBackGround;
+    UIImageView *middelBackGround;
     UIImageView *footerView;
     UIView * iAdd;
+    UIButton * mainButton;
+    UIButton * settingButton;
     
 }
 
